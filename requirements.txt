@@ -1,0 +1,7 @@
+tensorflow==2.14.0
+keras==2.14.0
+scikit-learn==1.3.2
+optuna==3.4.0
+numpy==1.26.1
+pandas==2.1.2
+matplotlib==3.8.1
