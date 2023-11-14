@@ -8,7 +8,7 @@ Moreover, the Optuna library is used to automate the model's hyperparameter tuni
 
 # Support Vector Regression
 
-Preprocessing the data was an important part of the process to take into consideration. Here it involves scaling the data down so that every value ranges from 0 to 1. This way the models can train faster. Generally, scaling the input data down seems to boost performance in ML models as well. Also, the 'Date' column isn't very useful as it is, so I had to convert those values into integers by first converting them into datetime objects, then converting those values into integers via `mdates` from Matplotlib. Moreover, the data was split into training and testing sets as typical when building any ML model.
+Preprocessing the data was an important part of the process to take into consideration. Here it involves scaling the data down so that every value ranges from 0 to 1. This way the models can train faster. Generally, scaling the input data down seems to boost performance in ML models as well. Also, the 'Date' column isn't very useful as it is, so I had to convert those values into integers by first converting them into datetime objects, then converting those values into integers via `dates` from Matplotlib. Moreover, the data was split into training and testing sets as typical when building any ML model.
 
 The model seemed to be prone to overfitting. I found that with a test size of 0.2, the model was getting an accuracy of near zero. But as I experimented with larger test sizes, results got slightly better up until a test size of around 0.4. Beyond this point, the model began to perform worse, likely because it didn't have enough training data. 
 
