@@ -40,4 +40,8 @@ I used two LSTM layers when building the model, but I do want to know how the mo
 It might simply need to train longer, or perhaps more refined hyperparameter tuning to improve its accuracy.
 
 # To do
-Adjust the x-axis and y-axis scale for the NN accuracy raph
+Accuracy with the RNN turned out to be a bit lower than with the regression model. Some ideas to improve the accuracy:
+- More time to train and/or more hyperparameter tuning to dial in the accuracy
+- More input data for training since this dataset is fairly small
+- Try using additional features in my model such as Volume
+- I also want to try approaching the problem differently altogether. Here I tried predicting the future price, which can be susceptible to a number of other factors that I didn't use in my model. What might make more sense is predicting the future returns instead. There are a few reasons why, but one important one is that when scaling the data, the values are within the range (0, 1). In practice, using that scaler on the testing data that the model hasn't seen before would cause the test data to go beyond the range of values that the model was trained on, which could hurt its accuracy. This is why I think in both models, the predicted price is noticeably lower than the actual price even though the shapes of the plots are fairly similar.
